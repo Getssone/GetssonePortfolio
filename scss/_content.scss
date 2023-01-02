@@ -4,13 +4,6 @@ content
 
 ------------------------------ */
 /* ----- section title ----- */
-.titleWithButton {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-}
-
 .art-section-title {
   display: flex;
   justify-content: space-between;
@@ -629,6 +622,14 @@ portfolio
   }
 }
 /* ----- portfolio items ----- */
+.titleWithButton {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 2rem;
+}
+
 .art-portfolio-item-frame {
   display: block;
   width: 100%;
@@ -770,17 +771,9 @@ portfolio
   .art-grid {
     & .art-grid-item {
       & .art-item-description {
-        position: relative;
-        left: 0;
-        width: 100%;
-        transform: translateY(0);
+        display: none;
       }
-
-      &:hover {
-        & .art-item-description {
-          transform: none;
-        }
-      }
+      
     }
   }
 }

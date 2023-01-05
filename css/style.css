@@ -1,11 +1,8 @@
 /* -------------------------------------------
 
-Name: 		Arter
+Name: 		Getssone
 Version:  1.0
-Author:		Nazar Miller (millerDigitalDesign)
-Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
-
-p.s. I am available for Freelance hire (UI design, web development). mail: miller.themes@gmail.com
+Author:		Gaetan Solis
 
 ------------------------------------------- */
 /*--------------------------------------------
@@ -1964,12 +1961,9 @@ portfolio
   width: 100%;
   outline: inherit;
   overflow: hidden;
-  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
   position: relative;
-  padding-bottom: 60%;
 }
 .art-portfolio-item-frame img {
-  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -1979,11 +1973,6 @@ portfolio
      object-position: center;
   filter: brightness(85%) blur(0);
   transition: 0.4s ease-in-out;
-}
-.art-portfolio-item-frame .imgAcm {
-  height: 40%;
-  top: 0;
-  left: 0;
 }
 .art-portfolio-item-frame .imgAcmButon {
   top: -144px;
@@ -2021,6 +2010,14 @@ portfolio
 }
 
 .art-grid {
+  display: flex !important;
+  height: auto !important;
+  position: inherit !important;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
   transition: 0.55s ease-in-out;
   width: 100%;
   /* clear fix */
@@ -2031,10 +2028,12 @@ portfolio
   clear: both;
 }
 .art-grid .art-grid-item {
+  left: 0px !important;
+  top: 0px !important;
   float: left;
   margin-bottom: 30px;
   overflow: hidden;
-  position: relative;
+  position: relative !important;
   height: auto;
   padding: 0 15px;
 }
@@ -2056,15 +2055,18 @@ portfolio
 .art-grid.art-grid-2-col .art-grid-item {
   width: 50%;
   height: 15rem;
+  left: 0px !important;
+  top: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  top: 0px !important;
 }
-.art-grid.art-grid-2-col .art-grid-item .art-portfolio-item-frame.art-horizontal {
-  padding-bottom: 66.7%;
-}
-.art-grid.art-grid-2-col .art-grid-item .art-portfolio-item-frame.art-vertical {
-  padding-bottom: 140%;
-}
-.art-grid.art-grid-2-col .art-grid-item .art-portfolio-item-frame.art-square {
-  padding-bottom: 90%;
+.art-grid.art-grid-2-col .art-grid-item .art-portfolio-item-frame {
+  padding-bottom: 0%;
 }
 
 /* ----- touch device ----- */
@@ -2082,9 +2084,6 @@ portfolio
   overflow: hidden;
   box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
   margin-bottom: 30px;
-}
-.art-project-cover .art-portfolio-item-frame {
-  padding-bottom: 50%;
 }
 
 .art-project-category {
@@ -2230,7 +2229,15 @@ content (after 1200px)
     display: none;
   }
   .art-grid.art-grid-2-col .art-grid-item {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: relative !important;
+    left: 0px !important;
+    top: 0px !important;
+    padding: 1rem;
   }
   .googlemap {
     width: 100%;

@@ -465,7 +465,7 @@ strong {
 }
 
 /* ----- blog ----- */
-.buttonSiteWeb{
+.buttonSiteWeb {
   background-color: $main-color;
   border-radius: 25px;
   margin: 1rem;
@@ -515,15 +515,15 @@ strong {
   }
 }
 
-.divgooglemap{
+.divgooglemap {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-.googlemap{
+.googlemap {
   width: 17rem;
-    height: auto;
+  height: auto;
 }
 /* ----- pagination ----- */
 .art-pagination {
@@ -624,10 +624,10 @@ portfolio
 /* ----- portfolio items ----- */
 .titleWithButton {
   display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  gap: 2rem;
 }
 
 .art-portfolio-item-frame {
@@ -635,12 +635,10 @@ portfolio
   width: 100%;
   outline: inherit;
   overflow: hidden;
-  box-shadow: $shadow-1;
   position: relative;
-  padding-bottom: 60%;
 
   & img {
-    position: absolute;
+    // position: absolute;
     width: 100%;
     top: 0;
     left: 0;
@@ -650,16 +648,10 @@ portfolio
     transition: $tr-md;
   }
 
-  .imgAcm {
-    height: 40%;
-    top: 0;
-    left: 0;
-  }
-
-  .imgAcmButon{
+  .imgAcmButon {
     top: -144px;
   }
-  .imgAcmButon2{
+  .imgAcmButon2 {
     top: -104px;
   }
 
@@ -699,6 +691,14 @@ portfolio
 }
 
 .art-grid {
+  display: flex !important;
+  height: auto !important;
+  position: inherit !important;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
   transition: $tr-lg;
   width: 100%;
 
@@ -710,14 +710,15 @@ portfolio
   }
 
   & .art-grid-item {
+    left: 0px !important;
+    top: 0px !important;
     float: left;
     margin-bottom: 30px;
     overflow: hidden;
-    position: relative;
+    position: relative !important;
     height: auto;
     padding: 0 15px;
 
- 
     & .art-item-description {
       position: absolute;
       z-index: 9;
@@ -742,22 +743,20 @@ portfolio
     & .art-grid-item {
       width: 50%;
       height: 15rem;
+      left: 0px !important;
+      top: 0px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      top: 0px !important;
 
       & .art-portfolio-item-frame {
-        &.art-horizontal {
-          padding-bottom: 66.7%;
-        }
-
-        &.art-vertical {
-          padding-bottom: 140%;
-        }
-
-        &.art-square {
-          padding-bottom: 90%;
-        }
+        padding-bottom: 0%;
       }
     }
-    
   }
 }
 /* ----- touch device ----- */
@@ -773,7 +772,6 @@ portfolio
       & .art-item-description {
         display: none;
       }
-      
     }
   }
 }
@@ -783,10 +781,6 @@ portfolio
   overflow: hidden;
   box-shadow: $shadow-1;
   margin-bottom: 30px;
-
-  & .art-portfolio-item-frame {
-    padding-bottom: 50%;
-  }
 }
 
 .art-project-category {
@@ -943,7 +937,6 @@ content (after 1400px)
       }
     }
   }
-
 }
 /* ------------------------------
 
@@ -962,14 +955,21 @@ content (after 1200px)
   .art-grid {
     &.art-grid-2-col {
       & .art-grid-item {
-        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        position: relative !important;
+        left: 0px !important;
+        top: 0px !important;
+        padding: 1rem;
       }
     }
   }
-  
 
-  .googlemap{
-width: 100%;
+  .googlemap {
+    width: 100%;
   }
 }
 /* ------------------------------
@@ -1035,7 +1035,6 @@ content (after 990px)
     position: absolute;
     bottom: 35px;
   }
-
 }
 /* ------------------------------
 
@@ -1073,7 +1072,6 @@ content (after 768px)
   .art-m-hidden {
     display: none;
   }
- 
 }
 /* ------------------------------
 

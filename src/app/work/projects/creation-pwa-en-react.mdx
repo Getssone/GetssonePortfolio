@@ -1,0 +1,103 @@
+---
+title: "Création d'une PWA en React"
+publishedAt: "2025-03-15"
+summary: "Découvrez pourquoi la création d'une Progressive Web App (PWA) en React permet de combiner les avantages des applications web et des applications mobiles, et pourquoi ce choix a plus d'importance que vous ne le pensez."
+images:
+  - "/images/projects/project-ideeri/cover-ideeri-logo.webp"
+  - "/images/projects/project-ideeri/cover_ideeri-pwa.webp"
+team:
+  - name: "Gaëtan Solis"
+    role: "Développeur Full-Stack"
+    avatar: "/images/avatar.webp"
+    linkedIn: "https://www.linkedin.com/in/gaetan-solis/"
+  - name: "Vincent Cali"
+    role: "Dirigeant"
+    avatar: "/images/projects/project-ideeri/partenaire/vincent-cali.webp"
+    linkedIn: "https://www.linkedin.com/company/ideeri/"
+link: "https://www.ecosysteme.ideeri.fr/"
+---
+
+## Vue d'ensemble
+
+Les Progressive Web Apps (PWAs) sont des applications web qui utilisent des technologies modernes pour offrir une expérience utilisateur similaire à celle des applications mobiles. Elles sont accessibles via un navigateur, mais peuvent également être installées sur l'écran d'accueil d'un appareil, fonctionner hors ligne et envoyer des notifications push.
+
+## Caractéristiques principales
+
+- **Configuration de l'environnement**: Installer Node.js et npm, puis utiliser Create React App pour initialiser un projet.
+- **Mise en place du manifest.json**: Créer un fichier manifest qui définit les propriétés de l'application, ainsi que le nom, l'icône et les couleurs.
+- **Intégration des Service Workers**: Configurer un Service Worker pour gérer le cache et permettre le fonctionnement hors ligne. Cela inclut l'enregistrement du Service Worker et la gestion des requêtes réseau.
+- **Développement des fonctionnalités**: 
+    - Mise en place du stockage sécurisé et organisation des documents liés aux propriétés et transactions.
+    - Suivi des activités et des performances.
+    - Notifications et alertes pour les étapes clés.
+    - Accès et gestion des données immobilières via l'API Papiris.
+
+- **Optimisation des performances**: Utiliser des techniques comme la mise en cache des ressources et le lazy loading pour améliorer la vitesse de chargement et l'expérience utilisateur.
+- **Tests et déploiement**: Tester la PWA avec des outils comme Lighthouse pour s'assurer qu'elle respecte les normes de performance et d'accessibilité, puis déployer l'application pour notre part sur Heroku.
+
+## Technologies utilisées
+
+- **Adobe**: Pour les composants qui on été imaginée.
+- **React**: Pour construire le front-end avec des composants propres et réutilisables.
+- **Zod**: Pour définir et valider les données des schémas crée via la Programmation Orientée Object (POO).
+- **Firebase**: Pour la gestion dynamique de l'authentification , les notifications push,...
+- **Lighthouse**: Pour auditer l'applications web et évalue la performance, l'accessibilité et les meilleures pratiques pour une PWA.
+- **GitHub**: Utilisée pour héberger le code de l'application, collaborer avec les autres développeurs et gérer les versions du projet.
+
+## Défis et enseignements
+
+
+### Défis
+
+1. **Complexité de la configuration** : La mise en place des Service Workers et du fichier manifest.json peut être difficile pour les développeurs novices.
+   
+2. **Gestion des états et des données** : La complexité de la gestion de l'état dans une application React peut poser des problèmes, surtout avec des données provenant de multiples sources.
+
+3. **Optimisation des performances** : Assurer une performance optimale nécessite des techniques avancées de mise en cache et d'optimisation des ressources.
+
+4. **Compatibilité entre navigateurs** : Garantir une expérience utilisateur cohérente sur différents navigateurs et appareils peut être un défi en raison des variations de support des fonctionnalités.
+
+5. **Gestion des erreurs et des exceptions** : Prévoir des mécanismes pour gérer les erreurs, notamment en mode hors ligne, peut s'avérer complexe.
+
+6. **Sécurité** : La nécessité de servir les PWAs via HTTPS pour garantir la sécurité des données implique des défis liés à la mise en place de certificats SSL.
+
+### Enseignements
+
+1. **Compréhension approfondie des technologies web** : Le projet permet d'acquérir des connaissances sur les Service Workers, le caching et les API Web.
+
+2. **Meilleures pratiques de développement** : L'importance de la validation des données, de la gestion de l'état et de l'optimisation des performances est mise en avant.
+
+3. **Collaboration et gestion de version** : Utiliser GitHub enseigne des compétences essentielles en matière de collaboration et de déploiement continu.
+
+4. **Résolution de problèmes** : Les défis rencontrés encouragent le développement de compétences en débogage et en recherche de solutions.
+
+5. **Sensibilisation à l'expérience utilisateur** : Le projet souligne l'importance de concevoir des interfaces réactives et accessibles.
+
+6. **Adaptabilité et apprentissage continu** : Il met en évidence la nécessité de rester à jour avec les évolutions technologiques et les meilleures pratiques.
+
+## Résultats
+
+Ce projet en découle d'un résultat positif majeur aussi bien sur la plan de la création d'une Progressive Web App (PWA) mais également en terme d'amélioration significative de l'expérience utilisateur. 
+
+Voici quelques aspects spécifiques de ce résultat :
+
+### Amélioration de l'Expérience Utilisateur
+
+1. **Accessibilité et Disponibilité** : Cette PWAs permettent aux utilisateurs d'accéder à l'application depuis n'importe quel appareil avec un navigateur, sans nécessiter de téléchargement depuis une boutique d'applications. Cela augmente l'accessibilité de l'application.
+
+2. **Fonctionnalité Hors Ligne** : Grâce aux Service Workers, les utilisateurs peuvent interagir avec l'application même sans connexion Internet. Cela est particulièrement bénéfique dans des zones à faible connectivité, offrant une continuité d'utilisation.
+
+3. **Performances Optimisées** : Les techniques de mise en cache et d'optimisation des ressources permettent un chargement rapide des pages, ce qui réduit le temps d'attente et améliore la satisfaction des utilisateurs.
+
+4. **Interface Réactive et Engagée** : En utilisant React, l'application offre une interface plus fluide et agréable.
+
+5. **Notifications Push** : En intégrant les notifications push, nous permettons aux utilisateurs de rester informés des mises à jour, des nouveautés ou des événements importants, ce qui favorise l'engagement.
+
+6. **Mises à Jour Transparentes** : Les utilisateurs bénéficient de mises à jour automatiques, garantissant qu'ils utilisent toujours la dernière version de l'application sans avoir à effectuer de téléchargements manuels.
+7. **Maintenance Simplifiée** : En développant une PWA, il n'est nécessaire de maintenir qu'une seule base de code pour toutes les plateformes (web et mobile). Cela réduit les efforts et le coût de développement, simplifiant ainsi le processus de mise à jour et de correction des bugs.
+
+---
+
+### Conclusion
+
+En somme, la création d'une PWA en React peut aboutir à une application qui non seulement répond aux besoins des utilisateurs de manière efficace, mais qui améliore également leur satisfaction et leur engagement. Cela peut se traduire par une augmentation du nombre d'utilisateurs, une meilleure rétention et, en fin de compte, un impact positif sur les objectifs commerciaux de l'application.

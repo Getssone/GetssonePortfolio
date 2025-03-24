@@ -1,65 +1,20 @@
-# **Build your portfolio with Once UI's Magic Portfolio**
+# GetssonePortfolio
 
-View the [demo here](https://demo.magic-portfolio.com).
+Here is My Portfolio that I will develop project by project
 
-![Magic Portfolio](public/images/cover.webp)
+# **Build with Once UI**
 
-# **Getting started**
-
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
-
-**1. Clone the repository**
-
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
-
-**2. Install dependencies**
-
-```
-npm install
-```
-
-**3. Run dev server**
-
-```
-npm run dev
-```
-
-**4. Edit config**
-
-```
-src/app/resources/config
-```
-
-**5. Edit content**
-
-```
-src/app/resources/content
-```
-
-**6. Create blog posts / projects**
-
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
-
-# **Features**
-
-## **Once UI**
-
-- All tokens, components & features of [Once UI](https://once-ui.com)
+Portfolio was built with [Next.js](https://nextjs.org). I use Node.js v20.
 
 ## **SEO**
 
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+- I have automated the Json-ld files (open-graph and X image) with [next/og](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)
+- Automatic [schema.xml](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap) and metadata generation based on the content file.
 
 ## **Design**
 
 - Responsive layout optimized for all screen sizes
 - Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
 
 ## **Content**
 
@@ -70,17 +25,18 @@ Add a new .mdx file to src/app/blog/posts or src/app/work/projects
 
 ## **Localization**
 
-- A localized version of Magic Portfolio is available with the next-intl library
+- In futur localized version will be available with the next-intl library
 - To use localization, switch to the 'i18n' branch
 
 # **Authors**
 
-Connect with us on Threads or LinkedIn.
+Gaetan Solis: [LinkedIn](https://www.linkedin.com/in/gaetan-solis/)
 
+# **Template and Authors**
+
+Once UI: [Vercel](https://vercel.com/templates/next.js/magic-portfolio-for-next-js)
 Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
 Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
-
-Localization added by [François Hernandez](https://github.com/francoishernandez)
 
 # **Get involved**
 

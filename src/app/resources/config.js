@@ -1,4 +1,4 @@
-const baseURL = "demo.magic-portfolio.com";
+const baseURL = "getsy.fr";
 
 const routes = {
   "/": true,
@@ -11,7 +11,7 @@ const routes = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes = {
-  "/work/creation-pwa-en-react": false,
+  "/work/creation-pwa-en-react": true,
 };
 
 const style = {

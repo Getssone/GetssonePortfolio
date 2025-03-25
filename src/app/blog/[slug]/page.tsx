@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "@/components/mdx";
 import { getPosts } from "@/app/utils/utils";
-import { AvatarGroup, Button, Column, Heading, Row, Text } from "@/once-ui/components";
+import { AvatarGroup, Button, Column, Heading, Row, SmartImage, Text } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import { person } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
@@ -101,6 +101,15 @@ export default function Blog({ params }: BlogParams) {
         Posts
       </Button>
       <Heading variant="display-strong-s">{post.metadata.title}</Heading>
+      {post.metadata.images.length > 0 && (
+        <SmartImage
+          priority
+          aspectRatio="16 / 9"
+          radius="m"
+          alt="image"
+          src={post.metadata.images[0]}
+        />
+      )}
       <Row gap="12" vertical="center">
         {avatars.length > 0 && <AvatarGroup size="s" avatars={avatars} />}
         <Text variant="body-default-s" onBackground="neutral-weak">

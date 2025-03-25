@@ -29,6 +29,9 @@ yarn-error.log*
 .env
 .env.*
 
+# Ignorer tous les fichiers .powerpoint
+.pptx
+
 # Ne pas ignorer le fichier d'exemple
 !.env.example
 

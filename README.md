@@ -14,6 +14,7 @@ Portfolio was built with [Next.js](https://nextjs.org). I use Node.js v20.
 
 - I have automated the Json-ld files (open-graph and X image) with [next/og](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)
 - Automatic [schema.xml](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap) and metadata generation based on the content file.
+- Reduce file sizes by adapting png to webp and mp4 to webm
 
 ## **Design**
 

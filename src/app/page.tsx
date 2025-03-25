@@ -100,11 +100,11 @@ export default function Home() {
       {routes["/work"] && (
         //Option 1
         <RevealFx translateY="16" delay={0.6}>
-        <Heading as="h2" variant="display-strong-xs" wrap="balance">
-          Récentes Réalisations 
-        </Heading>
-        <Projects range={[1,1]} /> 
-        {/* 
+          <Heading as="h2" variant="display-strong-xs" wrap="balance">
+            Récentes Réalisations
+          </Heading>
+          <Projects range={[1, 1]} />
+          {/* 
         //Option 2
         <Projects range={[1,3]} />
         */}
@@ -123,7 +123,9 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
+      {newsletter.display ? <Mailchimp newsletter={newsletter} /> :
+        <p> notbad</p>
+      }
     </Column>
   );
 }

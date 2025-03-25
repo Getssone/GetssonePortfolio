@@ -6,6 +6,10 @@ Here is My Portfolio that I will develop project by project
 
 Portfolio was built with [Next.js](https://nextjs.org). I use Node.js v20.
 
+## **Cache**
+
+- Caching during password use for certain content and timeout setting [next/og](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)
+
 ## **SEO**
 
 - I have automated the Json-ld files (open-graph and X image) with [next/og](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)
@@ -19,7 +23,7 @@ Portfolio was built with [Next.js](https://nextjs.org). I use Node.js v20.
 ## **Content**
 
 - Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
+- Enable or disable pages for about, blog, work, secretpage
 - Generate and display social links automatically
 - Set up password protection for URLs
 
@@ -34,7 +38,7 @@ Gaetan Solis: [LinkedIn](https://www.linkedin.com/in/gaetan-solis/)
 
 # **Template and Authors**
 
-Once UI: [Vercel](https://vercel.com/templates/next.js/magic-portfolio-for-next-js)
+Once UI: [Vercel](https://vercel.com/templates/next.js/magic-portfolio-for-next-js)  
 Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
 Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
 

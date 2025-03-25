@@ -33,8 +33,8 @@ import {
   PiImageDuotone,
 } from "react-icons/pi";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter,FaLaravel, FaReact, FaCss3Alt, FaDocker   } from "react-icons/fa6";
-import { SiTypescript, SiPostgresql, SiHeroku   } from "react-icons/si";
+import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter, FaLaravel, FaReact, FaCss3Alt, FaDocker } from "react-icons/fa6";
+import { SiTypescript, SiPostgresql, SiHeroku, SiAwssecretsmanager } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { RiDoubleQuotesL } from "react-icons/ri";
 export const iconLibrary: Record<string, IconType> = {
@@ -60,7 +60,7 @@ export const iconLibrary: Record<string, IconType> = {
   openLink: HiOutlineLink,
   calendar: HiCalendarDays,
   home: PiHouseDuotone,
-  gallery: PiImageDuotone,
+  secretpage: SiAwssecretsmanager,
   discord: FaDiscord,
   eye: HiOutlineEye,
   eyeOff: HiOutlineEyeSlash,
@@ -72,10 +72,10 @@ export const iconLibrary: Record<string, IconType> = {
   laravel: FaLaravel,
   react: FaReact,
   typescript: SiTypescript,
-  css: FaCss3Alt ,
-  api: TbApi ,
-  sql: SiPostgresql  ,
-  heroku: SiHeroku  ,
-  docker : FaDocker   ,
-  quote : RiDoubleQuotesL    ,
+  css: FaCss3Alt,
+  api: TbApi,
+  sql: SiPostgresql,
+  heroku: SiHeroku,
+  docker: FaDocker,
+  quote: RiDoubleQuotesL,
 };

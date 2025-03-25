@@ -24,7 +24,7 @@ const person = {
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Inscrit toi a la Newsletter de {person.firstName}</>,
   description: (
     <>
@@ -488,13 +488,13 @@ const work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery = {
-  label: "Galerie",
-  display: false,
+const secretpage = {
+  label: "Page secrète",
+  display: true,
   title: "Galerie de photos UX/UI /Dév et Modélisation",
   description: (
     <>
-      Hello a toi - Tu as trouvé ma galerie secrète -{" "}
+      Hello a toi - Tu as trouvé(e) ma galerie secrète -{" "}
       <InlineCode>#AmoureuxDeLaPhoto</InlineCode>
     </>
   ),
@@ -526,7 +526,7 @@ const gallery = {
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-06.webppp",
+      src: "/images/gallery/img-06.webp",
       alt: "image",
       orientation: "vertical",
     },
@@ -541,7 +541,7 @@ const gallery = {
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-09.webpp",
+      src: "/images/gallery/img-09.webp",
       alt: "image",
       orientation: "horizontal",
     },
@@ -573,4 +573,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, secretpage };

@@ -1,11 +1,11 @@
 import { Column, Flex, RevealFx, Text } from "@/once-ui/components";
 import MasonryGrid from "@/components/gallery/MasonryGrid";
 import { baseURL } from "@/app/resources";
-import { gallery, person } from "@/app/resources/content";
+import { secretpage, person } from "@/app/resources/content";
 
 export async function generateMetadata() {
-  const title = gallery.title;
-  const description = gallery.description;
+  const title = secretpage.title;
+  const description = secretpage.description;
   const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
@@ -15,7 +15,7 @@ export async function generateMetadata() {
       title,
       description,
       type: "website",
-      url: `https://${baseURL}/gallery`,
+      url: `https://${baseURL}/secretpage`,
       images: [
         {
           url: ogImage,
@@ -36,7 +36,7 @@ export default function Gallery() {
   return (
 
     <Column fillWidth>
-      
+
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -44,10 +44,10 @@ export default function Gallery() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ImageGallery",
-            name: gallery.title,
-            description: gallery.description,
-            url: `https://${baseURL}/gallery`,
-            image: gallery.images.map((image) => ({
+            name: secretpage.title,
+            description: secretpage.description,
+            url: `https://${baseURL}/secretpage`,
+            image: secretpage.images.map((image) => ({
               "@type": "ImageObject",
               url: `${baseURL}${image.src}`,
               description: image.alt,
@@ -64,13 +64,13 @@ export default function Gallery() {
         }}
       />
       <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="m">
-            <Text wrap="pretty" onBackground="neutral-weak" variant="heading-default-xl">
-            {gallery.description}
-            </Text>
-          </RevealFx>
-    <Flex fillWidth>
-      <MasonryGrid />
-    </Flex>
-      </Column>
+        <Text wrap="pretty" onBackground="neutral-weak" variant="heading-default-xl">
+          {secretpage.description}
+        </Text>
+      </RevealFx>
+      <Flex fillWidth>
+        <MasonryGrid />
+      </Flex>
+    </Column>
   );
 }

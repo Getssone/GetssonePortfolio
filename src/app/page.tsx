@@ -70,9 +70,9 @@ export default function Home() {
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
-            <Text wrap="pretty" onBackground="neutral-weak" variant="heading-default-xl">
+            {home.subline && <Text wrap="pretty" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
-            </Text>
+            </Text>}
           </RevealFx>
           <RevealFx translateY="12" delay={0.4} horizontal="start">
             <Button
@@ -123,9 +123,7 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-      {newsletter.display ? <Mailchimp newsletter={newsletter} /> :
-        <p> notbad</p>
-      }
+      {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );
 }

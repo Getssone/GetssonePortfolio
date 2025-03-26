@@ -95,7 +95,7 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
           Cette page est protégée par un mot de passe
         </Heading>
         <Text wrap="pretty" onBackground="neutral-medium" variant="heading-default-xl">
-          Essaye de le deviné 😉
+          Essayé de le deviner 😉
         </Text>
         <Column fillWidth gap="32" horizontal="center">
           <PasswordInput
@@ -104,6 +104,12 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             errorMessage={error}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handlePasswordSubmit();
+              }
+            }}
+
           />
           <Button onClick={handlePasswordSubmit}>Valider</Button>
         </Column>

@@ -1,12 +1,4 @@
-import {
-  Badge,
-  Column,
-  Flex,
-  Grid,
-  InlineCode,
-  LetterFx,
-} from "@/once-ui/components";
-import { display } from "./config";
+import { Badge, Grid, InlineCode } from "@/once-ui/components";
 
 const person = {
   firstName: "Gaëtan",

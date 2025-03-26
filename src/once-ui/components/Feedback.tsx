@@ -15,8 +15,9 @@ interface FeedbackProps extends Omit<React.ComponentProps<typeof Flex>, "title">
 }
 
 const variantIconMap: {
-  [key in "info" | "danger" | "warning" | "success"]: string;
+  [key in "accent" | "info" | "danger" | "warning" | "success"]: string;
 } = {
+  accent: "accentCircle",
   info: "infoCircle",
   danger: "errorCircle",
   warning: "warningTriangle",

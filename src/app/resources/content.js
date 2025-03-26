@@ -50,7 +50,8 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:getanswerme@duck.com",
+    link: "mailto:gaetan.solis@gmail.com",
+    //ineedtoknow@duck.com
   },
 ];
 
@@ -402,7 +403,7 @@ const about = {
 };
 
 const blog = {
-  label: "Note a moi-même",
+  label: "Note à moi-même",
   title: "Blog de Getssone ",
   subtitle: "Bienvenu dans mon journal de bord ",
   description: (
@@ -572,5 +573,26 @@ const secretpage = {
     },
   ],
 };
+const themeParams = {
+  label: "Pour toi",
+  display: true,
+  title: "Paramètre du blog",
+  description: (
+    <>
+      Parce que tes yeux méritent le meilleur : personnalise l'affichage pour un
+      confort optimal.
+    </>
+  ),
+};
 
-export { person, social, newsletter, home, about, blog, work, secretpage };
+export {
+  person,
+  social,
+  newsletter,
+  home,
+  about,
+  blog,
+  work,
+  secretpage,
+  themeParams,
+};

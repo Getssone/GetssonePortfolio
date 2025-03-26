@@ -24,7 +24,7 @@ Portfolio was built with [Next.js](https://nextjs.org). I use Node.js v20.
 ## **Content**
 
 - Render sections conditionally based on the content file
-- Enable or disable pages for about, blog, work, secretpage
+- Enable or disable pages for about, blog, work, secretpage, settings
 - Generate and display social links automatically
 - Set up password protection for URLs
 

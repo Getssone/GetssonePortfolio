@@ -6,6 +6,7 @@ const routes = {
   "/work": true,
   "/blog": true,
   "/secretpage": true,
+  "/themeParams": true,
 };
 
 // Enable password protection on selected routes
@@ -17,13 +18,17 @@ const protectedRoutes = {
 const style = {
   theme: "dark", // dark | light
   neutral: "gray", // sand | gray | slate
-  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "orange", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  brand: "yellow", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
-  transition: "all", // all | micro | macro
+  transition: "all", // all | micro | macro | none
+};
+
+const protectedStyle = {
+  surface: true,
 };
 
 const effects = {
@@ -106,4 +111,13 @@ const mailchimp = {
   },
 };
 
-export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL };
+export {
+  routes,
+  protectedRoutes,
+  effects,
+  style,
+  protectedStyle,
+  display,
+  mailchimp,
+  baseURL,
+};

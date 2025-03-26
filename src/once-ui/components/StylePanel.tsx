@@ -1,11 +1,11 @@
 "use client";
 
 import { forwardRef, useState, useEffect } from "react";
-import { Flex, Text, SegmentedControl, IconButton, Scroller, Column } from ".";
+import { Flex, Text, SegmentedControl, IconButton, Scroller, Column, Button } from ".";
 
 import styles from "./StylePanel.module.scss";
 import classNames from "classnames";
-import { style } from "@/app/resources";
+import { style, protectedStyle } from "@/app/resources";
 
 interface StylePanelProps extends React.ComponentProps<typeof Flex> {
   style?: React.CSSProperties;
@@ -91,7 +91,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
       <Column fillWidth paddingTop="12" paddingLeft="16" gap="4">
         <Text variant="heading-strong-s">Page</Text>
         <Text variant="body-default-s" onBackground="neutral-weak">
-          Customize global design settings
+          Personnaliser les paramètres globaux de la conception
         </Text>
       </Column>
 
@@ -117,7 +117,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
           />
         </Flex>
         <Flex horizontal="space-between" vertical="center" fillWidth paddingX="24" paddingY="16">
-          <Text variant="label-default-s">Shape</Text>
+          <Text variant="label-default-s">Forme des bordures</Text>
           <Flex gap="4">
             {shapes.map((radius, index) => (
               <Flex
@@ -143,9 +143,9 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
       </Column>
 
       <Column fillWidth paddingTop="12" paddingLeft="16" gap="4">
-        <Text variant="heading-strong-s">Color</Text>
+        <Text variant="heading-strong-s">Couleur</Text>
         <Text variant="body-default-s" onBackground="neutral-weak">
-          Customize color schemes
+          Personnaliser les couleurs
         </Text>
       </Column>
       <Column fillWidth border="neutral-alpha-medium" radius="l-4">
@@ -159,7 +159,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
           gap="24"
         >
           <Flex textVariant="label-default-s" minWidth={3}>
-            Brand
+            Principal
           </Flex>
           <Scroller minWidth={0} fitWidth>
             {colorOptions.brand.map((color, index) => (
@@ -182,7 +182,6 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
         </Flex>
 
         <Flex
-          borderBottom="neutral-alpha-medium"
           horizontal="space-between"
           vertical="center"
           fillWidth
@@ -191,7 +190,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
           gap="24"
         >
           <Flex textVariant="label-default-s" minWidth={3}>
-            Accent
+            Secondaire
           </Flex>
           <Scroller minWidth={0} fitWidth>
             {colorOptions.accent.map((color, index) => (
@@ -212,7 +211,6 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
             ))}
           </Scroller>
         </Flex>
-
         <Flex
           horizontal="space-between"
           vertical="center"
@@ -222,7 +220,28 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
           gap="24"
         >
           <Flex textVariant="label-default-s" minWidth={3}>
-            Neutral
+            Titre avec couleur inverser:
+          </Flex>
+          <Text wrap="pretty" align="center" onBackground="accent-strong" variant="heading-default-s">
+            Fort
+          </Text>
+          <Text wrap="pretty" align="center" onBackground="accent-medium" variant="heading-default-s">
+            Moyen
+          </Text>
+          <Text wrap="pretty" align="center" onBackground="accent-weak" variant="heading-default-s">
+            Faible
+          </Text>
+        </Flex>
+        <Flex
+          horizontal="space-between"
+          vertical="center"
+          fillWidth
+          paddingX="24"
+          paddingY="16"
+          gap="24"
+        >
+          <Flex textVariant="label-default-s" minWidth={3}>
+            Neutre
           </Flex>
           <Scroller minWidth={0} fitWidth>
             {colorOptions.neutral.map((color, index) => (
@@ -243,12 +262,33 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
             ))}
           </Scroller>
         </Flex>
+        <Flex
+          horizontal="space-between"
+          vertical="center"
+          fillWidth
+          paddingX="24"
+          paddingY="16"
+          gap="24"
+        >
+          <Flex textVariant="label-default-s" minWidth={3}>
+            Titre et fond de couleur neutre:
+          </Flex>
+          <Text wrap="pretty" align="center" onBackground="neutral-strong" variant="heading-default-s">
+            Fort
+          </Text>
+          <Text wrap="pretty" align="center" onBackground="neutral-medium" variant="heading-default-s">
+            Moyen
+          </Text>
+          <Text wrap="pretty" align="center" onBackground="neutral-weak" variant="heading-default-s">
+            Faible
+          </Text>
+        </Flex>
       </Column>
 
       <Column fillWidth paddingTop="12" paddingLeft="16" gap="4">
-        <Text variant="heading-strong-s">Solid style</Text>
+        <Text variant="heading-strong-s">Style et matériaux</Text>
         <Text variant="body-default-s" onBackground="neutral-weak">
-          Customize the appearance of interactive elements
+          Personnaliser l'apparence des éléments interactifs
         </Text>
       </Column>
       <Column fillWidth border="neutral-alpha-medium" radius="l-4">
@@ -279,7 +319,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
                       height="24"
                       radius="s"
                     ></Flex>
-                    Color
+                    Couleur
                   </Flex>
                 ),
                 value: "color",
@@ -333,7 +373,13 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
           paddingY="16"
           gap="24"
         >
-          <Text variant="label-default-s">Effect</Text>
+          <Text variant="label-default-s">Effet</Text>
+
+          <Button
+            variant="primary"
+            size="m"
+            label="Je suis un Button"
+          />
           <SegmentedControl
             maxWidth={22}
             minWidth={0}
@@ -383,13 +429,14 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
         </Flex>
       </Column>
       <Column fillWidth paddingTop="12" paddingLeft="16" gap="4">
-        <Text variant="heading-strong-s">Advanced</Text>
+        <Text variant="heading-strong-s">Paramètre avancé</Text>
         <Text variant="body-default-s" onBackground="neutral-weak">
-          Customize advanced styling options
+          Personnaliser les options de style avancées
         </Text>
       </Column>
       <Column fillWidth border="neutral-alpha-medium" radius="l-4">
-        <Flex
+
+        {surface && !protectedStyle && <Flex
           borderBottom="neutral-alpha-medium"
           horizontal="space-between"
           vertical="center"
@@ -397,8 +444,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
           paddingX="24"
           paddingY="16"
           gap="24"
-        >
-          <Text variant="label-default-s">Surface</Text>
+        ><Text variant="label-default-s">Surface</Text>
           <SegmentedControl
             maxWidth={22}
             minWidth={0}
@@ -417,7 +463,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
               },
             ]}
           />
-        </Flex>
+        </Flex>}
         <Flex
           borderBottom="neutral-alpha-medium"
           horizontal="space-between"
@@ -427,7 +473,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
           paddingY="16"
           gap="24"
         >
-          <Text variant="label-default-s">Scaling</Text>
+          <Text variant="label-default-s">Agrandissement</Text>
           <SegmentedControl
             maxWidth={22}
             minWidth={0}

@@ -23,7 +23,13 @@ import {
   HiArrowRight,
   HiOutlineEye,
   HiOutlineEyeSlash,
+  HiOutlineLightBulb,
 } from "react-icons/hi2";
+
+import {
+  HiSun,
+  HiMoon,
+} from "react-icons/hi";
 
 import {
   PiHouseDuotone,
@@ -31,9 +37,10 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
+  PiHeartHalfFill,
 } from "react-icons/pi";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter, FaLaravel, FaReact, FaCss3Alt, FaDocker } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter, FaLaravel, FaReact, FaCss3Alt, FaDocker, } from "react-icons/fa6";
 import { SiTypescript, SiPostgresql, SiHeroku, SiAwssecretsmanager } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { RiDoubleQuotesL } from "react-icons/ri";
@@ -48,6 +55,7 @@ export const iconLibrary: Record<string, IconType> = {
   arrowRight: HiArrowRight,
   helpCircle: HiMiniQuestionMarkCircle,
   infoCircle: HiInformationCircle,
+  accentCircle: HiOutlineLightBulb,
   warningTriangle: HiExclamationTriangle,
   errorCircle: HiExclamationCircle,
   checkCircle: HiCheckCircle,
@@ -78,4 +86,7 @@ export const iconLibrary: Record<string, IconType> = {
   heroku: SiHeroku,
   docker: FaDocker,
   quote: RiDoubleQuotesL,
+  themeParams: PiHeartHalfFill,
+  light: HiSun,
+  dark: HiMoon,
 };

@@ -5,8 +5,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const { password } = req.body;
     const correctPassword = process.env.PAGE_ACCESS_PASSWORD;
-    console.log(req);
-    console.log(res);
 
 
     if (!correctPassword) {

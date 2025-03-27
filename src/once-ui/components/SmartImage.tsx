@@ -98,7 +98,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
       : "";
   };
 
-  const isVideo = src?.endsWith(".webm");
+  const isVideo = src?.endsWith(".webm") || src?.endsWith(".avi") || src?.endsWith(".mp4");
   const isYouTube = isYouTubeVideo(src);
 
   return (

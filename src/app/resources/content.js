@@ -361,7 +361,7 @@ const about = {
           {
             src: "/images/figma/cover-03.webp",
             alt: "Extrait d'une application destiné aux photographes",
-            width: 35,
+            width: 36,
             height: 12,
           },
         ],
@@ -383,10 +383,16 @@ const about = {
             height: 9,
           },
           {
-            src: "/images/3d/2nd Object Débutant v3.webm",
+            src: "/images/3d/object-debutant.mp4",
             alt: "Vidéo d'une modélisation animée",
-            width: 35,
-            height: 12,
+            width: 18,
+            height: 10,
+          },
+          {
+            src: "/images/3d/Cuiseur_Vapeur_ CGH_avec_Couvercle.webp",
+            alt: "Vidéo d'une modélisation animée",
+            width: 14,
+            height: 10,
           },
         ],
       },

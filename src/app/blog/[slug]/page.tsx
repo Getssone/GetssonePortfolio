@@ -101,13 +101,13 @@ export default function Blog({ params }: BlogParams) {
         Posts
       </Button>
       <Heading variant="display-strong-s">{post.metadata.title}</Heading>
-      {post.metadata.images.length > 0 && (
+      {post.metadata.image && (
         <SmartImage
           priority
           aspectRatio="16 / 9"
           radius="m"
-          alt="image"
-          src={post.metadata.images[0]}
+          alt={post.metadata.alt}
+          src={post.metadata.image}
         />
       )}
       <Row gap="12" vertical="center">

@@ -28,7 +28,7 @@ export default function Post({ post, thumbnail }: PostProps) {
         paddingX="16"
         gap="32"
       >
-        {post.metadata.images.length > 0 && thumbnail && (
+        {post.metadata.image && thumbnail && (
           <SmartImage
             priority
             maxWidth={20}
@@ -37,7 +37,7 @@ export default function Post({ post, thumbnail }: PostProps) {
             border="neutral-alpha-weak"
             cursor="interactive"
             radius="m"
-            src={post.metadata.images[0]}
+            src={post.metadata.image}
             alt={"Thumbnail of " + post.metadata.title}
             aspectRatio="16 / 9"
           />

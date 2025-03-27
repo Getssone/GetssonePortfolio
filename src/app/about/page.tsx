@@ -9,9 +9,9 @@ import {
   SmartImage,
   Tag,
   Text,
+  InlineCode
 } from "@/once-ui/components";
-import { baseURL } from "@/app/resources";
-import { person, about, social } from "@/app/resources/content";
+import { person, social, about, baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 
@@ -82,7 +82,7 @@ export default function About() {
             url: `https://${baseURL}/about`,
             image: `${baseURL}/images/${person.avatar}`,
             sameAs: social
-              .filter((item) => item.link && !item.link.startsWith("mailto:"))
+              .filter((item) => item.link && !item.link.startsWith("mailto:")) // Filter out empty links and email links
               .map((item) => item.link),
             worksFor: {
               "@type": "Organization",
@@ -122,7 +122,7 @@ export default function About() {
             {person.languages.length > 0 && (
               <Flex wrap gap="8">
                 {person.languages.map((language, index) => (
-                  <Tag key={index + language} size="l">
+                  <Tag key={index} size="l">
                     {language}
                   </Tag>
                 ))}
@@ -243,7 +243,7 @@ export default function About() {
                       <Flex fillWidth center paddingTop="m" gap="64" wrap>
                         {experience.images.map((image, index) => (
                           <Flex
-                            key={index + image.alt}
+                            key={index}
                             border="neutral-medium"
                             radius="m"
                             //@ts-ignore
@@ -313,7 +313,7 @@ export default function About() {
                         {skill.images.map((image, index) => (
                           <Flex
                             fillWidth
-                            key={index + image.alt}
+                            key={index}
                             border="neutral-medium"
                             radius="m"
                             //@ts-ignore

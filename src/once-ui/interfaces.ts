@@ -4,6 +4,7 @@ import {
   ColorWeight,
   flex,
   gridColumns,
+  gridStyle,
   RadiusNest,
   RadiusSize,
   ShadowSize,
@@ -21,6 +22,7 @@ export interface GridProps extends HTMLAttributes<HTMLDivElement> {
   mobileColumns?: gridColumns;
   tabletRows?: gridColumns;
   mobileRows?: gridColumns;
+  justifyItems?: "start" | "center" | "end" | "space-between" | "space-around" | "space-evenly" | "stretch";
 }
 
 export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
@@ -28,21 +30,21 @@ export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   tabletDirection?: "row" | "column" | "row-reverse" | "column-reverse";
   mobileDirection?: "row" | "column" | "row-reverse" | "column-reverse";
   horizontal?:
-    | "start"
-    | "center"
-    | "end"
-    | "space-between"
-    | "space-around"
-    | "space-evenly"
-    | "stretch";
+  | "start"
+  | "center"
+  | "end"
+  | "space-between"
+  | "space-around"
+  | "space-evenly"
+  | "stretch";
   vertical?:
-    | "start"
-    | "center"
-    | "end"
-    | "space-between"
-    | "space-around"
-    | "space-evenly"
-    | "stretch";
+  | "start"
+  | "center"
+  | "end"
+  | "space-between"
+  | "space-around"
+  | "space-evenly"
+  | "stretch";
   center?: boolean;
   wrap?: boolean;
   flex?: flex;
@@ -100,38 +102,38 @@ export interface StyleProps extends HTMLAttributes<HTMLDivElement> {
   textType?: TextType;
   textWeight?: TextWeight;
   background?:
-    | `${ColorScheme}-${ColorWeight}`
-    | `${ColorScheme}-alpha-${ColorWeight}`
-    | "surface"
-    | "overlay"
-    | "page"
-    | "transparent";
+  | `${ColorScheme}-${ColorWeight}`
+  | `${ColorScheme}-alpha-${ColorWeight}`
+  | "surface"
+  | "overlay"
+  | "page"
+  | "transparent";
   solid?: `${ColorScheme}-${ColorWeight}`;
   borderTop?:
-    | `${ColorScheme}-${ColorWeight}`
-    | `${ColorScheme}-alpha-${ColorWeight}`
-    | "surface"
-    | "transparent";
+  | `${ColorScheme}-${ColorWeight}`
+  | `${ColorScheme}-alpha-${ColorWeight}`
+  | "surface"
+  | "transparent";
   borderRight?:
-    | `${ColorScheme}-${ColorWeight}`
-    | `${ColorScheme}-alpha-${ColorWeight}`
-    | "surface"
-    | "transparent";
+  | `${ColorScheme}-${ColorWeight}`
+  | `${ColorScheme}-alpha-${ColorWeight}`
+  | "surface"
+  | "transparent";
   borderBottom?:
-    | `${ColorScheme}-${ColorWeight}`
-    | `${ColorScheme}-alpha-${ColorWeight}`
-    | "surface"
-    | "transparent";
+  | `${ColorScheme}-${ColorWeight}`
+  | `${ColorScheme}-alpha-${ColorWeight}`
+  | "surface"
+  | "transparent";
   borderLeft?:
-    | `${ColorScheme}-${ColorWeight}`
-    | `${ColorScheme}-alpha-${ColorWeight}`
-    | "surface"
-    | "transparent";
+  | `${ColorScheme}-${ColorWeight}`
+  | `${ColorScheme}-alpha-${ColorWeight}`
+  | "surface"
+  | "transparent";
   border?:
-    | `${ColorScheme}-${ColorWeight}`
-    | `${ColorScheme}-alpha-${ColorWeight}`
-    | "surface"
-    | "transparent";
+  | `${ColorScheme}-${ColorWeight}`
+  | `${ColorScheme}-alpha-${ColorWeight}`
+  | "surface"
+  | "transparent";
   borderStyle?: "solid" | "dashed";
   borderWidth?: 1 | 2;
   topRadius?: RadiusSize;
@@ -161,12 +163,12 @@ export interface DisplayProps extends HTMLAttributes<HTMLDivElement> {
   overflowX?: CSSProperties["overflowX"];
   overflowY?: CSSProperties["overflowY"];
   transition?:
-    | "micro-short"
-    | "micro-medium"
-    | "micro-long"
-    | "macro-short"
-    | "macro-medium"
-    | "macro-long";
+  | "micro-short"
+  | "micro-medium"
+  | "micro-long"
+  | "macro-short"
+  | "macro-medium"
+  | "macro-long";
   opacity?: 0 | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100;
   zIndex?: -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 }

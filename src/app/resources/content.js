@@ -130,7 +130,7 @@ const about = {
           </>,
           <>
             Technologie :{" "}
-            <Grid columns="3" gap="24" padding="24">
+            <Grid columns="666" justifyItems="center" gap="24" padding="24">
               <Badge title="React" icon="react" arrow={false}></Badge>
               <Badge title="TypeScript" icon="typescript" arrow={false}></Badge>
               <Badge title="Css" icon="css" arrow={false}></Badge>
@@ -180,7 +180,7 @@ const about = {
           </>,
           <>
             Technologie :{" "}
-            <Grid columns="3" gap="24" padding="24">
+            <Grid columns="666" justifyItems="center" gap="24" padding="24">
               <Badge title="Laravel" icon="laravel" arrow={false}></Badge>
               <Badge title="React" icon="react" arrow={false}></Badge>
               <Badge title="TypeScript" icon="typescript" arrow={false}></Badge>

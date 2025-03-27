@@ -77,6 +77,15 @@ export type gridColumns =
   | 11
   | 12;
 
+export type gridStyle =
+  | "start"
+  | "center"
+  | "end"
+  | "space-between"
+  | "space-around"
+  | "space-evenly"
+  | "stretch";
+
 export type flex =
   | "0"
   | "1"

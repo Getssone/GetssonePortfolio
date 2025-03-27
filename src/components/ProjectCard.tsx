@@ -7,7 +7,7 @@ import {
   Flex,
   Heading,
   SmartLink,
-  Text,
+  Text
 } from "@/once-ui/components";
 
 interface ProjectCardProps {

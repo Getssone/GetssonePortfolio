@@ -11,17 +11,19 @@ import {
   CommonProps,
   DisplayProps,
   ConditionalProps,
+  FlexProps,
 } from "../interfaces";
 import { SpacingToken, ColorScheme, ColorWeight } from "../types";
 
 interface ComponentProps
   extends GridProps,
-    SpacingProps,
-    SizeProps,
-    StyleProps,
-    CommonProps,
-    DisplayProps,
-    ConditionalProps {}
+  FlexProps,
+  SpacingProps,
+  SizeProps,
+  StyleProps,
+  CommonProps,
+  DisplayProps,
+  ConditionalProps { }
 
 const Grid = forwardRef<HTMLDivElement, ComponentProps>(
   (
@@ -100,7 +102,10 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
       shadow,
       className,
       style,
+      horizontal,
+      vertical,
       children,
+      justifyItems,
       ...rest
     },
     ref,
@@ -187,8 +192,8 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
         border || borderTop || borderRight || borderBottom || borderLeft,
       ),
       (border || borderTop || borderRight || borderBottom || borderLeft) &&
-        !borderStyle &&
-        "border-solid",
+      !borderStyle &&
+      "border-solid",
       border && !borderWidth && `border-1`,
       (borderTop || borderRight || borderBottom || borderLeft) && "border-reset",
       borderTop && "border-top-1",
@@ -215,6 +220,7 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
       zIndex && `z-index-${zIndex}`,
       textType && `font-${textType}`,
       cursor && `cursor-${cursor}`,
+      justifyItems && `justify-items-${justifyItems}`,
       className,
     );
 

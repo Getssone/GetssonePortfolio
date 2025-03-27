@@ -5,7 +5,7 @@
 
 ul {
   margin: 0;
-  padding: 0 0 0 var(--static-space-32);
+  padding: 0 0 0 var(--static-space-12);
 }
 
 li {
@@ -14,7 +14,7 @@ li {
   font-size: inherit;
   color: inherit;
   margin-bottom: var(--static-space-12);
-  padding-left: var(--static-space-8);
+  padding-left: var(--static-space-4);
 
   &::marker {
     color: var(--brand-on-background-weak);

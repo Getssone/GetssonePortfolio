@@ -2,9 +2,8 @@
 
 import React, { forwardRef } from "react";
 
-import { Skeleton, Icon, Text, StatusIndicator, Flex, SmartImage, InlineCode } from ".";
+import { Skeleton, Icon, Text, StatusIndicator, Flex, SmartImage } from ".";
 import styles from "./Avatar.module.scss";
-import { person } from "@/app/resources";
 
 interface AvatarProps extends React.ComponentProps<typeof Flex> {
   size?: "xs" | "s" | "m" | "l" | "xl";
@@ -105,7 +104,6 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
       <Flex
         ref={ref}
         role="img"
-        aria-label={`image de l'avatar ${person.name}`}
         position="relative"
         horizontal="center"
         vertical="center"

@@ -25,15 +25,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Ignorer tous les fichiers .env
-.env
-.env.*
-
-# Ignorer tous les fichiers .powerpoint
-.pptx
-
-# Ne pas ignorer le fichier d'exemple
-!.env.example
+# local env files
+.env*.local
 
 # vercel
 .vercel

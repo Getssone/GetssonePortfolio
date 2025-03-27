@@ -32,7 +32,7 @@ const Toaster: React.FC<ToasterProps> = ({ toasts, removeToast }) => {
           padding="4"
           fillWidth
           position="absolute"
-          key={toast.id}
+          key={toast.id + toast.message}
           className={styles.toastWrapper}
           style={{
             transformOrigin: "bottom center",

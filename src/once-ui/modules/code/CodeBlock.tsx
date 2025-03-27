@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef, ReactNode } from "react";
 import "./CodeHighlight.css";
 import styles from "./CodeBlock.module.scss";
 
-import { Flex, Button, IconButton, Scroller, Row, StyleOverlay, InlineCode } from "@/once-ui/components";
+import { Flex, Button, IconButton, Scroller, Row, StyleOverlay } from "@/once-ui/components";
 
 import Prism from "prismjs";
 import "prismjs/plugins/line-highlight/prism-line-highlight";
@@ -147,7 +147,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
           {codeInstances.length > 1 ? (
             <Scroller paddingX="4">
               {codeInstances.map((instance, index) => (
-                <Row paddingY="4" paddingRight="2" key={index}>
+                <Row paddingY="4" paddingRight="2" key={index + instance.label}>
                   <Button
                     className="mr-2"
                     weight="default"
@@ -227,7 +227,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
           overflowY="auto"
         >
           {Array.isArray(codePreview)
-            ? codePreview.map((item, index) => <React.Fragment key={index}>{item}</React.Fragment>)
+            ? codePreview.map((item, index) => <React.Fragment key={index + item}>{item}</React.Fragment>)
             : codePreview}
         </Flex>
       )}

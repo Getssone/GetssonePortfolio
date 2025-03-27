@@ -3,7 +3,7 @@
 import React, { forwardRef, ReactNode } from "react";
 import classNames from "classnames";
 import { ElementType } from "./ElementType";
-import { Flex, Icon, InlineCode } from ".";
+import { Flex, Icon } from ".";
 import styles from "./ToggleButton.module.scss";
 
 interface CommonProps {
@@ -12,15 +12,15 @@ interface CommonProps {
   variant?: "ghost" | "outline";
   size?: "s" | "m" | "l";
   radius?:
-  | "none"
-  | "top"
-  | "right"
-  | "bottom"
-  | "left"
-  | "top-left"
-  | "top-right"
-  | "bottom-right"
-  | "bottom-left";
+    | "none"
+    | "top"
+    | "right"
+    | "bottom"
+    | "left"
+    | "top-left"
+    | "top-right"
+    | "bottom-right"
+    | "bottom-left";
   justifyContent?: "flex-start" | "center" | "flex-end" | "space-between";
   fillWidth?: boolean;
   weight?: "default" | "strong";

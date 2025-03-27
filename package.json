@@ -22,13 +22,12 @@
     "prismjs": "^1.29.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1",
+    "react-icons": "^5.5.0",
     "react-masonry-css": "^1.0.16",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "sass": "^1.77.6",
-    "sharp": "^0.33.4",
-    "sitemap": "^8.0.0"
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@csstools/postcss-global-data": "^2.1.1",
@@ -39,5 +38,14 @@
     "postcss-custom-media": "^10.0.7",
     "postcss-flexbugs-fixes": "^5.0.2",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "sharp"
+    ],
+    "onlyBuiltDependencies": [
+      "@parcel/watcher"
+    ]
   }
 }

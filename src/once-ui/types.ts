@@ -27,9 +27,9 @@ export type ShadowSize = TShirtSizes;
 export type SpacingToken = StaticSpacingToken | ResponsiveSpacingToken;
 
 export type ColorScheme =
+  | "neutral"
   | "brand"
   | "accent"
-  | "neutral"
   | "info"
   | "danger"
   | "warning"

@@ -16,11 +16,11 @@ type TableProps = {
 };
 
 function Table({ data }: TableProps) {
-  const headers = data.headers.map((header, index) => <th key={index}>{header}</th>);
+  const headers = data.headers.map((header, index) => <th key={index + header}>{header}</th>);
   const rows = data.rows.map((row, index) => (
     <tr key={index}>
       {row.map((cell, cellIndex) => (
-        <td key={cellIndex}>{cell}</td>
+        <td key={cellIndex + cell}>{cell}</td>
       ))}
     </tr>
   ));

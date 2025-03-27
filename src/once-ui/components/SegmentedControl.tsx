@@ -116,7 +116,6 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
               selected={index === selectedIndex}
               onClick={(event) => handleButtonClick(button, event)}
               role="tab"
-              aria-label={button.value}
               aria-selected={index === selectedIndex}
               aria-controls={`panel-${button.value}`}
               tabIndex={index === selectedIndex ? 0 : -1}

@@ -108,7 +108,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <Flex gap="4" paddingX="s" fillWidth horizontal="center">
               {images.map((_, index) => (
                 <Flex
-                  key={index}
+                  key={index + _.src}
                   onClick={() => handleControlClick(index)}
                   style={{
                     background:
@@ -127,7 +127,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <Scroller fillWidth gap="4" onItemClick={handleControlClick}>
               {images.map((image, index) => (
                 <Flex
-                  key={index}
+                  key={index + image.alt}
                   style={{
                     border: activeIndex === index ? "2px solid var(--brand-solid-strong)" : "none",
                     borderRadius: "var(--radius-m-nest-4)",

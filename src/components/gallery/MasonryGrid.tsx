@@ -23,7 +23,7 @@ export default function MasonryGrid() {
         <SmartImage
           priority={index < 10}
           sizes="(max-width: 560px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
-          key={index}
+          key={index + image.alt}
           radius="m"
           aspectRatio={image.orientation === "horizontal" ? "16 / 9" : "9 / 16"}
           src={image.src}

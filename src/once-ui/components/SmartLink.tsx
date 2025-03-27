@@ -2,7 +2,7 @@
 
 import React, { forwardRef, ReactNode } from "react";
 import classNames from "classnames";
-import { Icon, InlineCode } from ".";
+import { Icon } from ".";
 import { ElementType } from "./ElementType";
 
 interface CommonProps {
@@ -54,15 +54,15 @@ const SmartLink = forwardRef<HTMLAnchorElement, SmartLinkProps>(
       }),
       style: !unstyled
         ? {
-          ...(selected && {
-            textDecoration: "underline",
-          }),
-          ...style,
-        }
+            ...(selected && {
+              textDecoration: "underline",
+            }),
+            ...style,
+          }
         : {
-          textDecoration: "none",
-          ...style,
-        },
+            textDecoration: "none",
+            ...style,
+          },
       ...props,
     };
 

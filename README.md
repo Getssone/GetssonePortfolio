@@ -1,47 +1,86 @@
-# GetssonePortfolio
+# **Build your portfolio with Once UI's Magic Portfolio**
 
-Here is My Portfolio that I will develop project by project
+View the [demo here](https://demo.magic-portfolio.com).
 
-# **Build with Once UI**
+![Magic Portfolio](public/images/cover.webp)
 
-Portfolio was built with [Next.js](https://nextjs.org). I use Node.js v20.
+# **Getting started**
 
-## **Cache**
+Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
 
-- Caching during password use for certain content and timeout setting [next/og](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)
+**1. Clone the repository**
+
+```
+git clone https://github.com/once-ui-system/magic-portfolio.git
+```
+
+**2. Install dependencies**
+
+```
+npm install
+```
+
+**3. Run dev server**
+
+```
+npm run dev
+```
+
+**4. Edit config**
+
+```
+src/app/resources/config
+```
+
+**5. Edit content**
+
+```
+src/app/resources/content
+```
+
+**6. Create blog posts / projects**
+
+```
+Add a new .mdx file to src/app/blog/posts or src/app/work/projects
+```
+
+# **Features**
+
+## **Once UI**
+
+- All tokens, components & features of [Once UI](https://once-ui.com)
 
 ## **SEO**
 
-- I have automated the Json-ld files (open-graph and X image) with [next/og](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)
-- Automatic [schema.xml](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap) and metadata generation based on the content file.
-- Reduce file sizes by adapting png to webp and mp4 to webm
+- Automatic open-graph and X image generation with next/og
+- Automatic schema and metadata generation based on the content file
 
 ## **Design**
 
 - Responsive layout optimized for all screen sizes
 - Timeless design without heavy animations and motion
+- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
 
 ## **Content**
 
 - Render sections conditionally based on the content file
-- Enable or disable pages for about, blog, work, secretpage, settings
+- Enable or disable pages for blog, work, gallery and about / CV
 - Generate and display social links automatically
 - Set up password protection for URLs
 
 ## **Localization**
 
-- In futur localized version will be available with the next-intl library
+- A localized version of Magic Portfolio is available with the next-intl library
 - To use localization, switch to the 'i18n' branch
 
 # **Authors**
 
-Gaetan Solis: [LinkedIn](https://www.linkedin.com/in/gaetan-solis/)
+Connect with us on Threads or LinkedIn.
 
-# **Template and Authors**
-
-Once UI: [Vercel](https://vercel.com/templates/next.js/magic-portfolio-for-next-js)  
 Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
 Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
+
+Localization added by [François Hernandez](https://github.com/francoishernandez)
 
 # **Get involved**
 

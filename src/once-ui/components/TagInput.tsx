@@ -75,7 +75,7 @@ const TagInput = forwardRef<HTMLInputElement, TagInputProps>(
           >
             {value.map((tag, index) => (
               <Chip
-                key={index}
+                key={index + tag}
                 label={tag}
                 onRemove={() => handleRemoveTag(index)}
                 aria-label={`Remove tag ${tag}`}

@@ -33,7 +33,7 @@ const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
         {displayedAvatars.map((avatarProps, index) => (
           <Avatar
             position="relative"
-            key={index}
+            key={index + styles.avatar + size + ref}
             size={size}
             {...avatarProps}
             className={styles.avatar}

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, forwardRef, useImperativeHandle } from "react";
-import { Flex, Icon, Heading, Column, InlineCode } from ".";
+import { Flex, Icon, Heading, Column } from ".";
 import styles from "./Accordion.module.scss";
 
 interface AccordionProps extends Omit<React.ComponentProps<typeof Flex>, "title"> {

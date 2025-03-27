@@ -70,9 +70,9 @@ export default function Home() {
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
-            {home?.subline && <Text wrap="pretty" onBackground="neutral-weak" variant="heading-default-xl">
+            <Text wrap="pretty" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
-            </Text>}
+            </Text>
           </RevealFx>
           <RevealFx translateY="12" delay={0.4} horizontal="start">
             <Button
@@ -100,11 +100,11 @@ export default function Home() {
       {routes["/work"] && (
         //Option 1
         <RevealFx translateY="16" delay={0.6}>
-          <Heading as="h2" variant="display-strong-xs" wrap="balance">
-            Récentes Réalisations
-          </Heading>
-          <Projects range={[1, 1]} />
-          {/* 
+        <Heading as="h2" variant="display-strong-xs" wrap="balance">
+          Récentes Réalisations 
+        </Heading>
+        <Projects range={[1,1]} /> 
+        {/* 
         //Option 2
         <Projects range={[1,3]} />
         */}

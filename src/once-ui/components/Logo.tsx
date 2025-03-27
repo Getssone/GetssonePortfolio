@@ -5,7 +5,7 @@ import Link from "next/link";
 import classNames from "classnames";
 import styles from "./Logo.module.scss";
 import { SpacingToken } from "../types";
-import { Flex, InlineCode } from ".";
+import { Flex } from ".";
 
 const sizeMap: Record<string, SpacingToken> = {
   xs: "20",

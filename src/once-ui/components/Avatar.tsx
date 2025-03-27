@@ -2,7 +2,7 @@
 
 import React, { forwardRef } from "react";
 
-import { Skeleton, Icon, Text, StatusIndicator, Flex, SmartImage } from ".";
+import { Skeleton, Icon, Text, StatusIndicator, Flex, SmartImage, InlineCode } from ".";
 import styles from "./Avatar.module.scss";
 import { person } from "@/app/resources";
 

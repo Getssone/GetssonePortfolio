@@ -1,8 +1,7 @@
 
 
-import { Button, Column, Flex, Heading, LetterFx, Line, SmartImage, Text, ToggleButton } from "@/once-ui/components";
+import { Button, Column, Flex, Heading, LetterFx, Line, SmartImage, Text } from "@/once-ui/components";
 import { home, person, work, blog } from "@/app/resources/content";
-import { Posts } from "@/components/blog/Posts";
 import { baseURL, routes } from "@/app/resources";
 
 export default function NotFound() {
@@ -44,11 +43,6 @@ export default function NotFound() {
           background="neutral-alpha-medium"
         />
         <Line background="neutral-alpha-strong" />
-        {/* <Line
-    vert
-    height={20}
-    background="neutral-alpha-strong"
-  /> */}
         <SmartImage
           src="/images/getssone/patch-panda-mignon-suspendu-404.webp"
           alt="Panda qui a louper une marche "

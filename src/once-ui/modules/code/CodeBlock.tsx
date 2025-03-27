@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef, ReactNode } from "react";
 import "./CodeHighlight.css";
 import styles from "./CodeBlock.module.scss";
 
-import { Flex, Button, IconButton, Scroller, Row, StyleOverlay } from "@/once-ui/components";
+import { Flex, Button, IconButton, Scroller, Row, StyleOverlay, InlineCode } from "@/once-ui/components";
 
 import Prism from "prismjs";
 import "prismjs/plugins/line-highlight/prism-line-highlight";

@@ -2,7 +2,7 @@
 
 import React, { forwardRef, useState, useEffect, ReactNode } from "react";
 import { ElementType } from "./ElementType";
-import { Flex, Icon, Tooltip } from ".";
+import { Flex, Icon, Tooltip, InlineCode } from ".";
 import buttonStyles from "./Button.module.scss";
 import iconStyles from "./IconButton.module.scss";
 import classNames from "classnames";
@@ -12,15 +12,15 @@ interface CommonProps {
   id?: string;
   size?: "s" | "m" | "l";
   radius?:
-    | "none"
-    | "top"
-    | "right"
-    | "bottom"
-    | "left"
-    | "top-left"
-    | "top-right"
-    | "bottom-right"
-    | "bottom-left";
+  | "none"
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "top-left"
+  | "top-right"
+  | "bottom-right"
+  | "bottom-left";
   tooltip?: string;
   tooltipPosition?: "top" | "bottom" | "left" | "right";
   variant?: "primary" | "secondary" | "tertiary" | "danger" | "ghost";

@@ -1,7 +1,7 @@
 "use client";
 
 import Masonry from "react-masonry-css";
-import { SmartImage } from "@/once-ui/components";
+import { SmartImage, InlineCode } from "@/once-ui/components";
 import styles from "./Gallery.module.scss";
 import { secretpage } from "@/app/resources/content";
 

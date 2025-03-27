@@ -1,4 +1,12 @@
-import { Badge, Grid, InlineCode } from "@/once-ui/components";
+import {
+  Badge,
+  Column,
+  Flex,
+  Grid,
+  InlineCode,
+  LetterFx,
+} from "@/once-ui/components";
+import { display } from "./config";
 
 const person = {
   firstName: "Gaëtan",
@@ -8,11 +16,11 @@ const person = {
   },
   role: "Développeur Web / Application",
   avatar: "/images/avatar.webp",
-  location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "Europe/Paris",
   countryActuelle: "France",
   country2: "Chine",
-  languages: ["Français", "Anglais", "Chinois"], // optional: Leave the array empty if you don't want to display languages
-  passions: ["Développer", "Modéliser", "Chercher"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Français", "Anglais", "Chinois"],
+  passions: ["Développer", "Modéliser", "Chercher"],
 };
 
 const newsletter = {
@@ -27,8 +35,6 @@ const newsletter = {
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
@@ -142,7 +148,6 @@ const about = {
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-ideeri/cover-ideeri-01.webp",
             alt: "IdeeriProject",
@@ -344,7 +349,6 @@ const about = {
       {
         title: "Figma / Penpot",
         description: <>Mes dernier prototype UX/UI.</>,
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/figma/cover-01.webp",
@@ -483,8 +487,6 @@ const work = {
   label: "Mes Travaux",
   title: "Travaux de Getssone",
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
 };
 
 const secretpage = {

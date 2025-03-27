@@ -1,4 +1,4 @@
-import { Column, Flex, RevealFx, Text } from "@/once-ui/components";
+import { Column, Flex, RevealFx, Text, InlineCode } from "@/once-ui/components";
 import MasonryGrid from "@/components/gallery/MasonryGrid";
 import { baseURL } from "@/app/resources";
 import { secretpage, person } from "@/app/resources/content";

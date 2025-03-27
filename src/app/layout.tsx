@@ -10,7 +10,7 @@ import { Inter } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 
 import { person, home } from "@/app/resources/content";
-import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
+import { Background, Column, Flex, ToastProvider, InlineCode } from "@/once-ui/components";
 
 export async function generateMetadata() {
   return {

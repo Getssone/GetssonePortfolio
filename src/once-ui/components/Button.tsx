@@ -4,22 +4,22 @@ import React, { ReactNode, forwardRef } from "react";
 import { ElementType } from "./ElementType";
 import classNames from "classnames";
 
-import { Spinner, Icon, Arrow, Flex } from ".";
+import { Spinner, Icon, Arrow, Flex, InlineCode } from ".";
 import styles from "./Button.module.scss";
 
 interface CommonProps {
   variant?: "primary" | "secondary" | "tertiary" | "danger";
   size?: "s" | "m" | "l";
   radius?:
-    | "none"
-    | "top"
-    | "right"
-    | "bottom"
-    | "left"
-    | "top-left"
-    | "top-right"
-    | "bottom-right"
-    | "bottom-left";
+  | "none"
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "top-left"
+  | "top-right"
+  | "bottom-right"
+  | "bottom-left";
   label?: string;
   weight?: "default" | "strong";
   prefixIcon?: string;

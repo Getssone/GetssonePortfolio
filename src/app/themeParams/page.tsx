@@ -1,4 +1,4 @@
-import { Column, Flex, RevealFx, StyleOverlay, StylePanel, Text } from "@/once-ui/components";
+import { Column, Flex, RevealFx, StylePanel, Text, InlineCode } from "@/once-ui/components";
 import { themeParams } from "@/app/resources/content";
 
 export default function ThemeParams() {

@@ -109,8 +109,8 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
           <SegmentedControl
             maxWidth={22}
             buttons={[
-              { size: "l", label: "Light", value: "light", prefixIcon: "light" },
-              { size: "l", label: "Dark", value: "dark", prefixIcon: "dark" },
+              { size: "l", value: "light", prefixIcon: "light" },
+              { size: "l", value: "dark", prefixIcon: "dark" },
             ]}
             onToggle={(value) => setTheme(value as "light" | "dark")}
             selected={theme}
@@ -291,7 +291,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
           Personnaliser l'apparence des éléments interactifs
         </Text>
       </Column>
-      <Column fillWidth border="neutral-alpha-medium" radius="l-4">
+      <Column fillWidth center border="neutral-alpha-medium" paddingBottom="12" radius="l-4">
         <Flex
           borderBottom="neutral-alpha-medium"
           horizontal="space-between"
@@ -375,11 +375,6 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
         >
           <Text variant="label-default-s">Effet</Text>
 
-          <Button
-            variant="primary"
-            size="m"
-            label="Je suis un Button"
-          />
           <SegmentedControl
             maxWidth={22}
             minWidth={0}
@@ -427,6 +422,11 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
             selected={solidStyle}
           />
         </Flex>
+        <Button
+          variant="primary"
+          size="m"
+          label="Je suis un Button"
+        />
       </Column>
       <Column fillWidth paddingTop="12" paddingLeft="16" gap="4">
         <Text variant="heading-strong-s">Paramètre avancé</Text>

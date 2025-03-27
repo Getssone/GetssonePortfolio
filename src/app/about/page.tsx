@@ -9,11 +9,11 @@ import {
   SmartImage,
   Tag,
   Text,
+  InlineCode
 } from "@/once-ui/components";
-import { baseURL } from "@/app/resources";
+import { person, social, about, baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import { person, about, social } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = about.title;
@@ -214,7 +214,7 @@ export default function About() {
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
                 {about.work.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
+              <Column fillWidth gap="l" marginBottom="40" >
                 {about.work.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
                     <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
@@ -240,14 +240,14 @@ export default function About() {
                       ))}
                     </Column>
                     {experience.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" paddingLeft="40" gap="64" wrap>
+                      <Flex fillWidth center paddingTop="m" gap="64" wrap>
                         {experience.images.map((image, index) => (
                           <Flex
                             key={index}
                             border="neutral-medium"
                             radius="m"
                             //@ts-ignore
-                            minWidth={image.width}
+                            maxWidth={image.width}
                             //@ts-ignore
                             height={image.height}
                           >
@@ -309,14 +309,15 @@ export default function About() {
                       {skill.description}
                     </Text>
                     {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="64" wrap>
+                      <Flex fillWidth center paddingTop="m" gap="64" wrap>
                         {skill.images.map((image, index) => (
                           <Flex
+                            fillWidth
                             key={index}
                             border="neutral-medium"
                             radius="m"
                             //@ts-ignore
-                            minWidth={image.width}
+                            maxWidth={image.width}
                             //@ts-ignore
                             height={image.height}
                           >

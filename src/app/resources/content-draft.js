@@ -1,3 +1,11 @@
+import {
+  Badge,
+  Column,
+  Flex,
+  Grid,
+  InlineCode,
+  LetterFx,
+} from "@/once-ui/components";
 import { display } from "./config";
 
 const person = {
@@ -56,8 +64,9 @@ const home = {
   ),
   subline: (
     <>
-      Je suis {person.name}, un Développeur FULL-STACK. Je crée des sites et
-      applications intuitives en mettant en premier l'expérience utilisateur.
+      Je suis {person.name}, un Développeur <InlineCode>FULL-STACK</InlineCode>.
+      Je crée des sites et applications intuitives en mettant en premier
+      l'expérience utilisateur.
     </>
   ),
 };
@@ -85,18 +94,18 @@ const about = {
         <div>
           Développeur Full-Stack passionné, je suis constamment en veille sur
           les nouvelles technologies et innovations. Mon intérêt s'étend des{" "}
-          <>
+          <InlineCode>
             <strong>LANGAGES DE PROGRAMMATION</strong>
-          </>{" "}
+          </InlineCode>{" "}
           aux{" "}
-          <>
+          <InlineCode>
             {" "}
             <strong>DOMAINES ÉMERGENTS</strong>
-          </>{" "}
+          </InlineCode>{" "}
           tels que la réalité virtuelle et la{" "}
-          <>
+          <InlineCode>
             <strong>MODÉLISATION 3D</strong>.
-          </>{" "}
+          </InlineCode>{" "}
         </div>
         <div>
           Cette curiosité insatiable pour la recherche et l'exploration me
@@ -128,7 +137,14 @@ const about = {
             </ul>
           </>,
           <>
-            Technologie : <>React TypeScript Css API Rest Docker</>
+            Technologie :{" "}
+            <Grid columns="3" gap="24" padding="24">
+              <Badge title="React" icon="react" arrow={false}></Badge>
+              <Badge title="TypeScript" icon="typescript" arrow={false}></Badge>
+              <Badge title="Css" icon="css" arrow={false}></Badge>
+              <Badge title="API Rest" icon="api" arrow={false}></Badge>
+              <Badge title="Docker" icon="docker" arrow={false}></Badge>
+            </Grid>
           </>,
         ],
         images: [
@@ -172,7 +188,16 @@ const about = {
           </>,
           <>
             Technologie :{" "}
-            <>Laravel React TypeScript Css API Rest SQL Heroku Docker</>
+            <Grid columns="3" gap="24" padding="24">
+              <Badge title="Laravel" icon="laravel" arrow={false}></Badge>
+              <Badge title="React" icon="react" arrow={false}></Badge>
+              <Badge title="TypeScript" icon="typescript" arrow={false}></Badge>
+              <Badge title="Css" icon="css" arrow={false}></Badge>
+              <Badge title="API Rest" icon="api" arrow={false}></Badge>
+              <Badge title="SQL" icon="sql" arrow={false}></Badge>
+              <Badge title="Heroku" icon="heroku" arrow={false}></Badge>
+              <Badge title="Docker" icon="docker" arrow={false}></Badge>
+            </Grid>
           </>,
         ],
         images: [
@@ -385,9 +410,10 @@ const blog = {
   subtitle: "Bienvenu dans mon journal de bord ",
   description: (
     <>
-      Ici, j'écris sur le <>design</> et les <>technologies</> que j'ai apprécié
-      de découvrir, je mets également ma <>boite à outils</> à disposition pour
-      tous dév, manager SEO, UX/UI designer qui souhaiterait découvrir de
+      Ici, j'écris sur le <InlineCode>design</InlineCode> et les{" "}
+      <InlineCode>technologies</InlineCode> que j'ai apprécié de découvrir, je
+      mets également ma <InlineCode>boite à outils</InlineCode> à disposition
+      pour tous dév, manager SEO, UX/UI designer qui souhaiterait découvrir de
       nouvelles méthodes...
     </>
   ),
@@ -468,7 +494,10 @@ const secretpage = {
   display: true,
   title: "Galerie de photos UX/UI /Dév et Modélisation",
   description: (
-    <>Hello a toi - Tu as trouvé(e) ma galerie secrète - #AmoureuxDeLaPhoto</>
+    <>
+      Hello a toi - Tu as trouvé(e) ma galerie secrète -{" "}
+      <InlineCode>#AmoureuxDeLaPhoto</InlineCode>
+    </>
   ),
   // Images from https://pexels.com
   images: [

@@ -11,6 +11,7 @@ export {
 } from "@/app/resources/config";
 export {
   person,
+  hebergeur,
   social,
   newsletter,
   home,
@@ -18,4 +19,5 @@ export {
   blog,
   work,
   secretpage,
+  mentionsLegales,
 } from "@/app/resources/content";

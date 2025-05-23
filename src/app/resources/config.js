@@ -1,4 +1,4 @@
-const baseURL = "getsy.fr";
+const baseURL = "gaetan-solis.fr";
 
 const routes = {
   "/": true,
@@ -7,6 +7,7 @@ const routes = {
   "/blog": true,
   "/secretpage": true,
   "/themeParams": true,
+  "/mention-legale": true,
 };
 
 // Enable password protection on selected routes

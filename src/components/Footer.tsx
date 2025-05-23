@@ -1,6 +1,7 @@
 import { Flex, IconButton, SmartLink, Text } from "@/once-ui/components";
 import { person, social } from "@/app/resources/content";
 import styles from "./Footer.module.scss";
+import { routes } from "@/app/resources";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -37,6 +38,16 @@ export const Footer = () => {
             </SmartLink>
           </Text>
         </Text>
+        {routes["/mentions-legale"] && (
+          <Text variant="body-default-s" onBackground="neutral-strong">
+            <SmartLink
+              style={{ marginLeft: "-0.125rem" }}
+              href="/mentions-legale"
+            >
+              Mentions légales
+            </SmartLink>
+          </Text>
+        )}
         <Flex gap="16">
           {social.map(
             (item) =>

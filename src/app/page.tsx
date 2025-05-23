@@ -98,16 +98,22 @@ export default function Home() {
         </Column>
       </Column>
       {routes["/work"] && (
-        //Option 1
         <RevealFx translateY="16" delay={0.6}>
-        <Heading as="h2" variant="display-strong-xs" wrap="balance">
-          Récentes Réalisations 
-        </Heading>
-        <Projects range={[1,1]} /> 
-        {/* 
+          <Flex fillWidth gap="24" mobileDirection="column" >
+            {/* //Option 1 */}
+            <Flex flex={1} paddingLeft="l">
+              <Heading as="h2" variant="display-strong-xs" wrap="balance">
+                Récentes Réalisations
+              </Heading>
+            </Flex>
+            <Flex>
+              <Projects range={[1, 1]} />
+              {/* 
         //Option 2
         <Projects range={[1,3]} />
         */}
+            </Flex>
+          </Flex>
         </RevealFx>
       )
       }

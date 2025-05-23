@@ -40,7 +40,7 @@ import {
   PiHeartHalfFill,
 } from "react-icons/pi";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter, FaLaravel, FaReact, FaCss3Alt, FaDocker, } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter, FaLaravel, FaReact, FaCss3Alt, FaDocker, FaCode } from "react-icons/fa6";
 import { SiTypescript, SiPostgresql, SiHeroku, SiAwssecretsmanager } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { RiDoubleQuotesL } from "react-icons/ri";
@@ -89,4 +89,5 @@ export const iconLibrary: Record<string, IconType> = {
   themeParams: PiHeartHalfFill,
   light: HiSun,
   dark: HiMoon,
+  code: FaCode,
 };

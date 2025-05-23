@@ -78,15 +78,15 @@ export default function About() {
             "@type": "Person",
             name: person.name,
             jobTitle: person.role,
-            description: about.intro.description,
+            description: about.intro.descriptionMeta,
             url: `https://${baseURL}/about`,
-            image: `${baseURL}/images/${person.avatar}`,
+            image: `${baseURL}${person.avatar}`,
             sameAs: social
               .filter((item) => item.link && !item.link.startsWith("mailto:")) // Filter out empty links and email links
               .map((item) => item.link),
             worksFor: {
               "@type": "Organization",
-              name: about.work.experiences[0].company || "",
+              name: about.work.experiences.map((item) => item.company) || "",
             },
           }),
         }}
@@ -128,6 +128,26 @@ export default function About() {
                 ))}
               </Flex>
             )}
+            <Column
+              className={styles.avatar}
+              minWidth="160"
+              paddingX="l"
+              paddingBottom="xl"
+              gap="m"
+              flex={3}
+              horizontal="center">
+              <Flex gap="8" vertical="center">
+                <Icon onBackground="accent-weak" name="code" />
+                Domaines d'Expertise
+              </Flex>
+              <Flex gap="8">
+                {person.profilTags.map((profilTag, index) => (
+                  <InlineCode key={index} align="center">
+                    <strong>{profilTag}</strong>
+                  </InlineCode>
+                ))}
+              </Flex>
+            </Column>
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>

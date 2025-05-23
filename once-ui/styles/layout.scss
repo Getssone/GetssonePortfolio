@@ -37,6 +37,9 @@
 .s-flex-show {
     display: none !important;
 }
+.xs-flex-show {
+    display: none !important;
+}
 
 @media (--l) {
     .l-flex-hide {
@@ -94,24 +97,42 @@
     .s-flex-hide {
         display: none !important;
     }
+    .xs-flex-hide {
+        display: none !important;
+    }
 
     .s-flex-show {
+        display: flex !important;
+    }
+    .xs-flex-show {
         display: flex !important;
     }
 
     .s-flex-column {
         flex-direction: column !important;
     }
+    .xs-flex-column {
+        flex-direction: column !important;
+    }
 
     .s-flex-row {
+        flex-direction: row !important;
+    }
+    .xs-flex-row {
         flex-direction: row !important;
     }
 
     .s-flex-column-reverse {
         flex-direction: column-reverse !important;
     }
+    .xs-flex-column-reverse {
+        flex-direction: column-reverse !important;
+    }
     
     .s-flex-row-reverse {
+        flex-direction: row-reverse !important;
+    }
+    .xs-flex-row-reverse {
         flex-direction: row-reverse !important;
     }
 }

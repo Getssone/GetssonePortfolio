@@ -6,7 +6,7 @@ import { blog, person, newsletter } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = blog.title;
-  const description = blog.description;
+  const description = blog.descriptionMeta;
   const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
@@ -48,7 +48,7 @@ export default function Blog() {
             "@context": "https://schema.org",
             "@type": "Blog",
             headline: blog.title,
-            description: blog.description,
+            description: blog.descriptionMeta,
             url: `https://${baseURL}/blog`,
             image: `${baseURL}/og?title=${encodeURIComponent(blog.title)}`,
             author: {
@@ -56,7 +56,7 @@ export default function Blog() {
               name: person.name,
               image: {
                 "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
+                url: `${baseURL}/${person.avatar}`,
               },
             },
           }),

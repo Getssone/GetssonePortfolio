@@ -7,7 +7,7 @@ const routes = {
   "/blog": true,
   "/secretpage": true,
   "/themeParams": true,
-  "/mention-legale": true,
+  "/mentions-legales": true,
 };
 
 // Enable password protection on selected routes

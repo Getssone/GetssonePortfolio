@@ -8,3 +8,22 @@
   outline: 0;
   border: 0;
 }
+.liserai {
+  position: relative;
+  padding: 20px; /* Ajustez le padding selon vos besoins */
+}
+
+.liserai::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Positionne le liseré en bas de la div */
+  left: 0;
+  width: 100%;
+  height: 10px; /* Hauteur du liseré */
+  background: linear-gradient(
+    to right,
+    #0055a4,
+    #ffffff,
+    #ef4135
+  ); /* Dégradé bleu, blanc, rouge */
+}

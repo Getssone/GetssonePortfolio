@@ -28,6 +28,7 @@ const person = {
 };
 const hebergeur = {
   name: "O2SWITCH",
+  slogan: "Hébergement 100% Français",
   tel: "+33.444446041",
   adresse: "Chemin des Pardiaux, CLERMONT FERRAND, 63000, FR",
   email: "dns-nospam@o2switch.fr",
@@ -64,6 +65,16 @@ const social = [
     name: "Bao-Link",
     icon: "globe",
     link: "https://www.bao-link.com",
+  },
+  {
+    name: "Malt",
+    icon: "malt",
+    link: "https://www.malt.fr/profile/gaetansolis",
+  },
+  {
+    name: "CV",
+    icon: "cv",
+    link: "https://github.com/Getssone/GetssonePortfolio/tree/main/public/images/CV_Gaetan_Solis-Dev-Full-Stack-WK.pdf",
   },
 ];
 
@@ -617,7 +628,7 @@ const mentionsLegales = {
     title: "1. Informations Légales",
     content: (
       <>
-        <ul>
+        <ul className="liserai ">
           <li>
             <strong>Nom de l'éditeur:</strong> {person.name}
           </li>
@@ -643,6 +654,11 @@ const mentionsLegales = {
             <strong>Numéro de téléphone de l'hébergeur:</strong> {hebergeur.tel}
           </li>
         </ul>
+        <p className="display-flex justify-center mb-64">
+          <strong>
+            <i>{hebergeur.slogan}</i>
+          </strong>
+        </p>
         <Heading as="h3" variant="display-strong-m" marginBottom="m">
           <u>1.1 Droits d'Auteurs</u>
         </Heading>

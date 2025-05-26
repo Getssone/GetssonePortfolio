@@ -28,40 +28,33 @@ export const Footer = () => {
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
-            {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
             / alias {" "}
-            <SmartLink
-              style={{ marginLeft: "-0.125rem" }}
-              href="https://github.com/Getssone"
-            >
-              Getssone
-            </SmartLink>
+            Getssone
           </Text>
         </Text>
-        {routes["/mentions-legale"] && (
-          <Text variant="body-default-s" onBackground="neutral-strong">
-            <SmartLink
-              style={{ marginLeft: "-0.125rem" }}
-              href="/mentions-legale"
-            >
-              Mentions légales
-            </SmartLink>
-          </Text>
-        )}
+        <Text variant="body-default-s" onBackground="neutral-strong">
+          <SmartLink
+            style={{ marginLeft: "-0.125rem" }}
+            href="/mentions-legales"
+          >
+            Mentions légales
+          </SmartLink>
+        </Text>
         <Flex gap="16">
-          {social.map(
-            (item) =>
-              item.link && (
-                <IconButton
-                  key={item.name}
-                  href={item.link}
-                  icon={item.icon}
-                  tooltip={item.name}
-                  size="s"
-                  variant="ghost"
-                />
-              ),
-          )}
+          {social.filter((item) => item.name && !item.name.startsWith("Bao-Link") && !item.name.startsWith("Malt"))
+            .map(
+              (item) =>
+                item.link && (
+                  <IconButton
+                    key={item.name}
+                    href={item.link}
+                    icon={item.icon}
+                    tooltip={item.name}
+                    size="s"
+                    variant="ghost"
+                  />
+                ),
+            )}
         </Flex>
       </Flex>
       <Flex height="80" show="s"></Flex>

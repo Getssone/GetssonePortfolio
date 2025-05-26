@@ -140,13 +140,17 @@ export default function About() {
                 <Icon onBackground="accent-weak" name="code" />
                 Domaines d'Expertise
               </Flex>
-              <Flex gap="8">
-                {person.profilTags.map((profilTag, index) => (
-                  <InlineCode key={index} align="center">
-                    <strong>{profilTag}</strong>
-                  </InlineCode>
-                ))}
-              </Flex>
+              <Column gap="8">
+                <ul id="domaine-expertise">
+                  {person.profilTags.map((profilTag, index) => (
+                    <Text variant="label-default-xs" key={index} >
+                      <Tag size="l" variant="brand" marginBottom="s">
+                        {`> ${profilTag}`}
+                      </Tag>
+                    </Text>
+                  ))}
+                </ul>
+              </Column>
             </Column>
           </Column>
         )}
@@ -195,30 +199,31 @@ export default function About() {
             </Text>
             {social.length > 0 && (
               <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth>
-                {social.map(
-                  (item) =>
-                    item.link && (
-                      <>
-                        <Button
-                          className="s-flex-hide"
-                          key={item.name}
-                          href={item.link}
-                          prefixIcon={item.icon}
-                          label={item.name}
-                          size="s"
-                          variant="secondary"
-                        />
-                        <IconButton
-                          className="s-flex-show"
-                          size="l"
-                          key={`${item.name}-icon`}
-                          href={item.link}
-                          icon={item.icon}
-                          variant="secondary"
-                        />
-                      </>
-                    ),
-                )}
+                {social.filter((item) => item.name && !item.name.startsWith("LinkedIn") && !item.name.startsWith("Email") && !item.name.startsWith("CV")) // Filter out empty links and email links
+                  .map(
+                    (item) =>
+                      item.link && (
+                        <>
+                          <Button
+                            className="s-flex-hide"
+                            key={item.name}
+                            href={item.link}
+                            prefixIcon={item.icon}
+                            label={item.name}
+                            size="s"
+                            variant="secondary"
+                          />
+                          <IconButton
+                            className="s-flex-show"
+                            size="l"
+                            key={`${item.name}-icon`}
+                            href={item.link}
+                            icon={item.icon}
+                            variant="secondary"
+                          />
+                        </>
+                      ),
+                  )}
               </Flex>
             )}
           </Column>

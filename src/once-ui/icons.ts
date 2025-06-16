@@ -44,11 +44,13 @@ import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter, FaLaravel, FaReact, FaCss3
 import { SiTypescript, SiPostgresql, SiHeroku, SiAwssecretsmanager, SiMalt } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { RiDoubleQuotesL } from "react-icons/ri";
+import { LuChevronsLeftRight } from "react-icons/lu";
 export const iconLibrary: Record<string, IconType> = {
   chevronUp: HiChevronUp,
   chevronDown: HiChevronDown,
   chevronRight: HiChevronRight,
   chevronLeft: HiChevronLeft,
+  chevronsLeftRight: LuChevronsLeftRight,
   refresh: HiOutlineArrowPath,
   arrowUpRight: HiArrowUpRight,
   check: HiCheck,

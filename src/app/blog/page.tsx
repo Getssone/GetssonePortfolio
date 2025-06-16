@@ -2,12 +2,12 @@ import { Avatar, Card, Column, Flex, Heading, Icon, Line, RevealFx, Row, Text } 
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL } from "@/app/resources";
-import { blog, person, newsletter } from "@/app/resources/content";
+import { blog, person, newsletter, home } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = blog.title;
   const description = blog.descriptionMeta;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  const ogImage = `${baseURL}${home.imageOG}`;
 
   return {
     title,
@@ -50,7 +50,7 @@ export default function Blog() {
             headline: blog.title,
             description: blog.descriptionMeta,
             url: `https://${baseURL}/blog`,
-            image: `${baseURL}/og?title=${encodeURIComponent(blog.title)}`,
+            image: `${baseURL}${home.imageOG}`,
             author: {
               "@type": "Person",
               name: person.name,

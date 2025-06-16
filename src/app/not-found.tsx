@@ -19,7 +19,7 @@ export default function NotFound() {
             name: home.title,
             description: home.description,
             url: `https://${baseURL}`,
-            image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
+            image: `${baseURL}${home.imageOG}`,
             publisher: {
               "@type": "Person",
               name: person.name,

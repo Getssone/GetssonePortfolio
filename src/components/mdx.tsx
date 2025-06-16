@@ -7,6 +7,7 @@ import { HeadingLink } from "@/components";
 
 import { TextProps } from "@/once-ui/interfaces";
 import { SmartImageProps } from "@/once-ui/components/SmartImage";
+import { CompareImage } from "@/once-ui/components/Compareimage";
 
 type TableProps = {
   data: {
@@ -141,6 +142,7 @@ const components = {
   Table,
   CodeBlock,
   Feedback,
+  CompareImage
 };
 
 type CustomMDXProps = MDXRemoteProps & {

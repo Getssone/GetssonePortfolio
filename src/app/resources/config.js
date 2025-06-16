@@ -1,4 +1,4 @@
-const baseURL = "gaetan-solis.fr";
+const baseURL = "dev.gaetan-solis.fr";
 
 const routes = {
   "/": true,

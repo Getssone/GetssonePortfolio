@@ -2,12 +2,12 @@ import { getPosts } from "@/app/utils/utils";
 import { Column, InlineCode } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 import { baseURL } from "@/app/resources";
-import { person, work } from "@/app/resources/content";
+import { home, person, work } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = work.title;
   const description = work.description;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  const ogImage = `${baseURL}${home.imageOG}`;
 
   return {
     title,
@@ -48,7 +48,7 @@ export default function Work() {
             headline: work.title,
             description: work.description,
             url: `https://${baseURL}/projects`,
-            image: `${baseURL}/og?title=Design%20Projects`,
+            image: `${baseURL}${home.imageOG}`,
             author: {
               "@type": "Person",
               name: person.name,

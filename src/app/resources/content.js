@@ -79,6 +79,7 @@ const social = [
 ];
 
 const home = {
+  imageOG: "/images/Illustration-Hebergeur_bao-link.webp",
   label: "Getssone",
   title: `${person.name} Portfolio`,
   description: `Hello, je suis Gaëtan Solis alias Getssone développeur et modélisateur 3d voici mon portfolio présentant mon travail.`,
@@ -522,7 +523,7 @@ const work = {
 const secretpage = {
   label: "Page secrète",
   display: true,
-  title: "Galerie de photos UX/UI /Dév et Modélisation",
+  title: "Page secrète",
   description: (
     <>
       Hello a toi - Tu as trouvé(e) ma galerie secrète -{" "}

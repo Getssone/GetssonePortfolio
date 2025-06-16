@@ -1,12 +1,12 @@
 import { Column, Flex, RevealFx, Text, InlineCode } from "@/once-ui/components";
 import MasonryGrid from "@/components/gallery/MasonryGrid";
 import { baseURL } from "@/app/resources";
-import { secretpage, person } from "@/app/resources/content";
+import { secretpage, person, home } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = secretpage.title;
   const description = secretpage.description;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  const ogImage = `${baseURL}${home.imageOG}`;
 
   return {
     title,

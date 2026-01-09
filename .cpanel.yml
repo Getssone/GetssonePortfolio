@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/votre_nom_utilisateur/public_html
+    - export DEPLOYPATH=/home/juxo9357/git/reposMirror/GetssonePortfolio
     - /bin/cp -R * $DEPLOYPATH

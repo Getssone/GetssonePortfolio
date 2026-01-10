@@ -37,10 +37,12 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           # On envoie le code buildé, le server.js et le dossier tmp pour le restart
           local-dir: ./
-          server-dir: ./git/reposMirror/GetssonePortfolio/
+          server-dir: ./
           # On exclut ce qui est lourd ou inutile sur le serveur
           exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/src/**
+            .git/
+            .git/**
+            node_modules/
+            node_modules/**
+            src/
+            src/**

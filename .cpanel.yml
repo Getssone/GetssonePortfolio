@@ -1,5 +1,1 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/juxo9357/git/reposMirror/GetssonePortfolio
-    - /bin/cp -R * $DEPLOYPATH
+## A Supprimer

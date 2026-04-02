@@ -190,7 +190,7 @@ const about = {
             height: 18,
           },
           {
-            src: "/images/projects/project-ideeri/cover-ideeri-10.webm",
+            src: "/images/projects/project-ideeri/image-ideeri-022.webp",
             alt: "IdeeriProject",
             width: 9,
             height: 18,
